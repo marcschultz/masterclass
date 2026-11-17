@@ -1,0 +1,19 @@
+{
+  "name": "masterclass",
+  "version": "1.0.0",
+  "description": "Learn p5.js while Codex builds your sketches with you.",
+  "author": { "name": "Schultzschultz" },
+  "license": "MIT",
+  "keywords": ["p5.js", "creative coding", "learning"],
+  "skills": "./skills/",
+  "hooks": {},
+  "interface": {
+    "displayName": "Masterclass",
+    "shortDescription": "Learn p5.js while Codex builds your sketches",
+    "longDescription": "Masterclass puts learning first. Codex asks for your design decisions, plans the technical side with you through checkpoints, and explains what it changes and why. It knows the differences between p5.js 1.x and 2.x.",
+    "developerName": "Schultzschultz",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": ["$masterclass:learn"]
+  }
+}

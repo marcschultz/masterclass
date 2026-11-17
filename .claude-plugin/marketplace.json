@@ -1,0 +1,11 @@
+{
+  "name": "masterclass",
+  "owner": { "name": "Schultzschultz" },
+  "plugins": [
+    {
+      "name": "masterclass",
+      "source": "./",
+      "description": "Learn p5.js while the AI builds your sketches with you."
+    }
+  ]
+}

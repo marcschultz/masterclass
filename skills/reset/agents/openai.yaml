@@ -1,0 +1,5 @@
+interface:
+  display_name: "Masterclass Reset"
+  short_description: "Back up learning notes and restart setup"
+policy:
+  allow_implicit_invocation: false

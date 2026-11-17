@@ -1,0 +1,5 @@
+interface:
+  display_name: "Masterclass New Project"
+  short_description: "Create an empty p5.js project from the course template"
+policy:
+  allow_implicit_invocation: false

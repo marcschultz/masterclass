@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Learning notes from testing the plugin inside this folder
+.masterclass/
+.masterclass.backup/

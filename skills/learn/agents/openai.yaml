@@ -1,0 +1,5 @@
+interface:
+  display_name: "Masterclass Learn"
+  short_description: "Start or resume p5.js learning mode"
+policy:
+  allow_implicit_invocation: false
