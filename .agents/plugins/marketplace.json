@@ -1,14 +1,21 @@
 {
-  "name": "masterclass",
-  "interface": { "displayName": "Masterclass" },
+  "name": "schultzschultz",
+  "interface": {
+    "displayName": "Schultzschultz"
+  },
   "plugins": [
     {
       "name": "masterclass",
-      "source": { "source": "local", "path": "./" },
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL",
-        "products": ["CODEX"]
+        "products": [
+          "CODEX"
+        ]
       },
       "category": "Developer Tools"
     }

@@ -1,6 +1,8 @@
 {
-  "name": "masterclass",
-  "owner": { "name": "Schultzschultz" },
+  "name": "schultzschultz",
+  "owner": {
+    "name": "Schultzschultz"
+  },
   "plugins": [
     {
       "name": "masterclass",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+- The marketplace is now called `schultzschultz`, so the plugin shows up as `masterclass@schultzschultz`.
+- **Reinstall required:** remove the plugin and the old `masterclass` marketplace once, then add `marcschultz/masterclass` again and install `masterclass@schultzschultz`. Your learning notes are not affected.
+
 ## 1.1.3
 
 - New description for the "Intermediate" level in the setup: "I’m comfortable modifying code and have used p5.js occasionally."
