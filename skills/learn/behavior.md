@@ -257,6 +257,53 @@ is already there. JavaScript basics the user already knows from the course
 (loops, functions, classes, …) are only noted when used in a new way
 (e.g. "an array of objects for many particles").
 
+### Organize notes by topic
+`notes.md` is organized in topics, so the user can find things again:
+
+```markdown
+# Learning notes
+
+## Drawing & color
+- colorMode(HSB, ...): switches how fill()/stroke() colors are interpreted
+  (hue, saturation, brightness instead of red, green, blue).
+- push()/pop(): saves and restores the current drawing settings, so changes
+  inside don't leak out.
+
+## Transformations
+- translate(x, y): moves the canvas origin (0, 0) to a new point, so drawing
+  afterwards is relative to that point.
+```
+
+Use these topics, in this order. Only add a topic heading when its first entry
+is added – never write empty topics:
+
+1. Sketch structure – setup()/draw(), global variables, sketch.js sections, files, script loading
+2. Drawing & color – shapes, fill/stroke, color modes, push()/pop(), blend modes
+3. Shapes & vertices – beginShape(), vertex(), curves, contours
+4. Transformations – translate(), rotate(), scale(), angle modes
+5. Typography – text(), fonts, text metrics, text to points
+6. Motion & time – frameCount, millis(), lerp(), easing, animation loops
+7. Randomness & noise – random(), noise(), randomSeed()
+8. Math & vectors – map(), constrain(), dist(), trigonometry, p5.Vector
+9. Input & interaction – mouse, keyboard, touch
+10. UI & controls – HTML/CSS panel, select(), setupUI(), configuration variables
+11. Images & assets – loading files, images, pixels
+12. Objects & arrays – classes, arrays of objects, organizing many elements
+13. Export – saving images, GIFs, video, project state
+14. Performance – frame rate, optimizing draw()
+15. Debugging – console, errors, finding bugs
+16. p5.js versions – 1.x vs 2.x differences
+
+Rules:
+- Each entry: `- name: one-line explanation`, under the one topic where the
+  user would look for it first (e.g. textAlign() goes to Typography, not
+  Transformations).
+- If no topic fits, add a new topic at the end, named in the same style.
+- Don't duplicate: if a concept is already noted, improve its line instead.
+- Keep any entries or headings the user wrote themselves.
+- If `notes.md` has entries without topics (from an older version), sort them
+  into topics once without losing any line, and tell the user in one sentence.
+
 ## Escape hatches
 - "just implement this one" → skip checkpoints for that step only.
   Creative ownership still applies: design values come from the user or

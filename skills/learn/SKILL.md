@@ -62,7 +62,8 @@ Create `.masterclass/profile.md`:
 - Existing UI: <html-css|p5-dom|none>
 - Libraries: <comma-separated names, or none>
 ```
-Create an empty `.masterclass/notes.md` with the heading `# Learning notes`.
+Create `.masterclass/notes.md` with only the heading `# Learning notes`.
+Topics are added as entries come in (see "Notes" in behavior.md).
 
 Suggest adding `.masterclass/` to `.gitignore`, but do not change it without asking.
 
@@ -79,3 +80,11 @@ Summarize where we left off in two sentences, then ask as a button question:
 Options: Continue – "Pick up where we left off" /
 Something new – "I have a new idea for this sketch" /
 Review – "Quiz me on what I learned so far"
+
+If `notes.md` still has entries without topics, sort them into topics first
+(see "Notes" in behavior.md).
+
+On **Review**: if the notes have more than one topic, ask as a button question
+which topic to review (up to 4 topics with the most entries, plus "Mix of
+everything"). Then ask quick-check questions about entries from that topic,
+one at a time, as described under "Quick checks" in behavior.md.

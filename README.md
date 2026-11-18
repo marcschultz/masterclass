@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 1.0.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 1.1.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -13,7 +13,7 @@ All three tools share your learning notes, so you can switch between them.
 ### Claude Code (VS Code panel)
 
 1. Type `/plugins` to open **Manage plugins**.
-2. On the **Marketplaces** tab, add `<github-user>/masterclass`.
+2. On the **Marketplaces** tab, add `marcschultz/masterclass`.
 3. On the **Plugins** tab, install **masterclass** and choose **Install locally**
    to enable it only for the current project.
 4. In other projects, turn it on with the switch next to `masterclass@masterclass`.
@@ -24,7 +24,7 @@ All three tools share your learning notes, so you can switch between them.
 
 In a terminal:
 ```sh
-codex plugin marketplace add <github-user>/masterclass
+codex plugin marketplace add marcschultz/masterclass
 codex plugin add masterclass@masterclass
 ```
 
@@ -32,7 +32,7 @@ codex plugin add masterclass@masterclass
 
 1. Make sure the setting `chat.plugins.enabled` is on.
 2. Command Palette → **Chat: Install Plugin from Source** →
-   enter `https://github.com/<github-user>/masterclass`.
+   enter `https://github.com/marcschultz/masterclass`.
 3. Start a new chat with Copilot.
 
 Copilot support for plugin formats is still evolving; if a skill doesn't show up,
@@ -146,6 +146,10 @@ conflict.
 Your profile (`profile.md`) and learning notes (`notes.md`) are stored in
 `.masterclass/` inside each project. You can open and read them anytime.
 Add `.masterclass/` to `.gitignore` if you don't want them in Git.
+
+Learning notes are organized by topic (e.g. Drawing & color, Transformations,
+Typography, Motion & time), so you can find things again. When you choose
+**Review** after starting `learn`, you can pick a topic to be quizzed on.
 
 ## License
 

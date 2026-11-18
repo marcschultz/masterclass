@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+- Learning notes are organized by topic (16 fixed topics, e.g. Drawing & color, Transformations, Typography).
+- Older notes without topics are sorted into topics automatically, without losing any line.
+- Review can focus on one topic.
+
 ## 1.0.0
 
 First public release.
