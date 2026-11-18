@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3
+
+- New description for the "Intermediate" level in the setup: "I’m comfortable modifying code and have used p5.js occasionally."
+
 ## 1.1.2
 
 - Open questions use a plain text field where the tool offers one (Copilot Chat); in Claude Code they are asked as plain chat text.

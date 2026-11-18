@@ -23,7 +23,7 @@ Ask these as button questions (see "Asking questions" in behavior.md),
 one at a time, and wait for each answer:
 1. "What's your experience with p5.js?"
    Options: Beginner – "New to p5.js or coding" /
-   Intermediate – "I know setup(), draw() and basic shapes" /
+   Intermediate – "I’m comfortable modifying code and have used p5.js occasionally." /
    Advanced – "I want to discuss code structure and performance"
 2. "How often should I pause for checkpoints?"
    Options: Light – "Only before bigger code changes" /
