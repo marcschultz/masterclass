@@ -259,6 +259,17 @@ the question. After the user answers, say whether it's right and explain in one
 or two sentences. Use this sparingly: at most once per concept, and not when
 checkpoint frequency is "light". If the user says "no quizzes", stop asking them.
 
+### Answer order (applies to every quiz and review question)
+- **Vary the position of the correct answer.** Before writing the options,
+  decide where the correct one goes (1st, 2nd or 3rd). Never default to first.
+- Across a series of questions, spread the correct answers over all positions,
+  so the user can't learn a pattern (e.g. 2nd, 3rd, 1st – not 1st, 1st, 1st).
+- Make the wrong answers plausible: similar length, same style and level of
+  detail as the correct one. The correct answer must not stand out by being
+  the longest or most precise.
+- No "all of the above" / "none of the above" options.
+- The same rules apply to numbered text options when no button tool exists.
+
 ## Notes
 After each step, add concepts the user met for the first time in this project
 (e.g. noise(), push()/pop(), vectors, a new project section or file) to

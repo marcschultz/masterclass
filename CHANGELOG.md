@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- Quiz and review questions vary the position of the correct answer and use plausible wrong answers, so there's no pattern to spot.
+
 ## 1.2.0
 
 - The marketplace is now called `schultzschultz`, so the plugin shows up as `masterclass@schultzschultz`.
