@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.2
+
+- Open questions use a plain text field where the tool offers one (Copilot Chat); in Claude Code they are asked as plain chat text.
+
+## 1.1.1
+
+- Open questions (e.g. the project name in `new-project`) are asked as plain chat text instead of a button dialog with placeholder options.
+
 ## 1.1.0
 
 - Learning notes are organized by topic (16 fixed topics, e.g. Drawing & color, Transformations, Typography).

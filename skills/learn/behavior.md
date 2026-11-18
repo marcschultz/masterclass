@@ -209,8 +209,18 @@ Use **button questions** whenever the user picks from a few clear choices:
 The user can always type their own answer instead of clicking.
 
 Use **open text questions** (no buttons) when the user should think for themselves,
-e.g. "How would you approach this?" or "What should the sketch show?".
+e.g. "How would you approach this?" or "What should the sketch show?", and whenever
+the answer is free text (a name, a folder, a color value).
 Never turn those into multiple choice – offering answers would do the thinking for them.
+
+How to ask an open text question:
+- If your question tool can show a plain text field **without options**
+  (e.g. in VS Code Copilot Chat), you may use it.
+- If your question tool always needs options – like AskUserQuestion in Claude
+  Code – don't use it. Write the question as a normal chat message, end your
+  turn, and let the user reply in the chat input.
+- Never add placeholder options ("I'll type a name", "Type it below", "Other")
+  just to fill a tool that requires options.
 
 After asking, end your turn and wait. Don't answer your own question.
 

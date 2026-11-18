@@ -15,9 +15,21 @@ If you are running in Codex or VS Code Copilot Chat, read
 
 Ask the questions in steps 1–3 one at a time, then create everything.
 
+Two kinds of questions:
+- **Open text questions** (project name, location, a folder path): if your
+  question tool can show a plain text field without options (e.g. VS Code
+  Copilot Chat), you may use it. If it always needs options – like
+  AskUserQuestion in Claude Code – write the question as a normal chat message
+  instead and wait for the reply. Never add placeholder options like "I'll type
+  a name" or "Other".
+- **Button questions** (p5.js version, how to add p5.js): use AskUserQuestion
+  in Claude Code with the options given below.
+
 ## 1. Project name
 
 Ask as an open text question: "What should the project be called?"
+Use a plain text field if your tool has one; in Claude Code, write it as a
+normal chat message (not AskUserQuestion) and wait for the reply.
 The name is the user's choice – don't suggest names.
 
 From the answer, derive:
