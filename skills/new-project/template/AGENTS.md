@@ -11,7 +11,8 @@ Prioritize understandable, flexible and reliable code. Prefer explicit, readable
 <!-- Keep this section when you adapt this file. It tells the AI how this file and the masterclass plugin work together. -->
 
 When masterclass learning mode is active (started with `/masterclass:learn` or `$masterclass:learn`), its rules take precedence over this file wherever they conflict – especially for design decisions, suggestions, when to ask vs. decide, checkpoints, explanations, UI approach and libraries.
-All other rules in this file still apply. When learning mode is paused or not started, this file applies as written.
+The same applies to masterclass coding mode (`/masterclass:coding` or `$masterclass:coding`): there, the user writes all code themselves and the AI never edits project files.
+All other rules in this file still apply. When learning or coding mode is paused or not started, this file applies as written.
 
 ## Core Behavior
 

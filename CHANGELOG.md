@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.0
+
+- New **coding mode** (`/masterclass:coding`): you write the code yourself. The AI reads your project, suggests three challenges (warm-up, fitting, stretch), and supports you with "check code", "help me" (hints, never code) and "solve it" (solution in the chat only). It never edits your project files.
+- Every challenge gets a protocol in `.masterclass/challenges/` (task, checks, hints, solution, timestamps) with a short review at the end; `challenges.md` lists all challenges. Unfinished challenges can be continued in a new chat.
+- In an empty project, coding mode asks you to open an example project first.
+- The AGENTS.md template mentions coding mode in its "Learning Mode" section.
+
 ## 1.2.1
 
 - Quiz and review questions vary the position of the correct answer and use plausible wrong answers, so there's no pattern to spot.

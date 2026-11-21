@@ -6,7 +6,8 @@ learning behavior; follow SKILL.md and behavior.md as written.
 ## Codex
 - Commands: `/masterclass:learn` is `$masterclass:learn`;
   `/masterclass:reset` is `$masterclass:reset`;
-  `/masterclass:new-project` is `$masterclass:new-project`.
+  `/masterclass:new-project` is `$masterclass:new-project`;
+  `/masterclass:coding` is `$masterclass:coding`.
 - Paths: guides such as behavior.md and the references/ folder sit next to
   this file. `${CLAUDE_PLUGIN_ROOT}` is not expanded in Codex.
 - Button questions: AskUserQuestion doesn't exist here. If a native question

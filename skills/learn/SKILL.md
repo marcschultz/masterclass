@@ -8,6 +8,8 @@ disable-model-invocation: true
 
 The user has explicitly started learning mode. From now on, for the rest of this
 conversation, follow [behavior.md](behavior.md) – not only for this message.
+If coding mode was active in this conversation, it ends now: from here on you
+may write code again (with checkpoints).
 
 If you are running in Codex or VS Code Copilot Chat rather than Claude Code,
 first read [other-tools.md](other-tools.md).

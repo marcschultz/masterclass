@@ -1,0 +1,5 @@
+interface:
+  display_name: "Masterclass Coding"
+  short_description: "Write the code yourself: challenges, feedback and hints"
+policy:
+  allow_implicit_invocation: false

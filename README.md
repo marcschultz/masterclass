@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 1.2.1** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 1.3.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -50,17 +50,24 @@ What's new in each version: see [CHANGELOG.md](CHANGELOG.md).
 
 ## Commands
 
-Learning mode is opt-in: it only starts when you invoke it in a session.
+Learning mode and coding mode are opt-in: they only start when you invoke them in a session.
 
 | Action | Claude Code | Codex | Copilot Chat |
 |---|---|---|---|
 | Start / resume learning | `/masterclass:learn` | `$masterclass:learn` | `/` menu → learn |
+| Coding mode (you write the code) | `/masterclass:coding` | `$masterclass:coding` | `/` menu → coding |
 | Reset profile and notes | `/masterclass:reset` | `$masterclass:reset` | `/` menu → reset |
 | New empty project | `/masterclass:new-project` | `$masterclass:new-project` | `/` menu → new-project |
 
 **learn** – The first time in a project, it asks for your level, checkpoint frequency
 and how to handle design placeholders, and detects the p5.js version, UI approach and
 libraries. Later, it summarizes where you left off.
+
+**coding** – You write the code yourself. The AI reads your project, explains what it
+does, and suggests three challenges (warm-up, fitting, stretch) based on your code and
+level. After you pick one, it explains the task and the rules – and never edits your files.
+Coding mode needs existing code: in an empty project, open one of the course's example
+projects first.
 
 **reset** – Backs up your profile and notes to `.masterclass.backup/` and runs the
 setup again. Your sketch files are never touched.
@@ -71,7 +78,17 @@ whether to use p5.js 1.x or 2.x, downloads the latest stable version into `libra
 and fills in the AGENTS.md for that version. If the download fails, you can copy
 p5.js from another project or add it yourself.
 
-### Things you can say during a session
+### Things you can say in coding mode
+
+| Say | What happens |
+|---|---|
+| "check code" | Save your file first – the AI reviews what you changed and gives feedback, without writing code. |
+| "help me" | A hint, never code. Ask again for a more concrete hint. |
+| "solve it" | A complete solution, shown in the chat only. You type it in yourself. |
+| "new challenge" | Three new suggestions. |
+| "stop coding" | Leaves coding mode; an open challenge is kept for next time. |
+
+### Things you can say in learning mode
 
 | Say | What happens |
 |---|---|
@@ -150,6 +167,13 @@ Add `.masterclass/` to `.gitignore` if you don't want them in Git.
 Learning notes are organized by topic (e.g. Drawing & color, Transformations,
 Typography, Motion & time), so you can find things again. When you choose
 **Review** after starting `learn`, you can pick a topic to be quizzed on.
+
+Coding mode writes a **protocol** for every challenge in `.masterclass/challenges/`:
+the task, every check, hint and solution with a timestamp, and a short review at the
+end (result, what went well, what was difficult, concepts practiced, next step).
+`challenges.md` is the overview with links to all protocols, and `challenge-start/`
+keeps a copy of your files from when the current challenge started. An unfinished
+challenge can be continued in a new chat.
 
 ## License
 
