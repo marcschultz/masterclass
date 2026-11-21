@@ -1,8 +1,13 @@
 # Changelog
 
+## 1.3.1
+
+- Coding mode offers three equally difficult challenges matched to your profile level (no more warm-up / stretch tiers).
+- Clearer assignments: one goal each, with file, function and the observable result, in plain words.
+
 ## 1.3.0
 
-- New **coding mode** (`/masterclass:coding`): you write the code yourself. The AI reads your project, suggests three challenges (warm-up, fitting, stretch), and supports you with "check code", "help me" (hints, never code) and "solve it" (solution in the chat only). It never edits your project files.
+- New **coding mode** (`/masterclass:coding`): you write the code yourself. The AI reads your project, suggests three challenges, and supports you with "check code", "help me" (hints, never code) and "solve it" (solution in the chat only). It never edits your project files.
 - Every challenge gets a protocol in `.masterclass/challenges/` (task, checks, hints, solution, timestamps) with a short review at the end; `challenges.md` lists all challenges. Unfinished challenges can be continued in a new chat.
 - In an empty project, coding mode asks you to open an example project first.
 - The AGENTS.md template mentions coding mode in its "Learning Mode" section.

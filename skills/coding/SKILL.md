@@ -90,21 +90,41 @@ Derive three challenges from the code:
   mouse – you decide how", "Store the circles in an array of objects".
   Whenever a challenge needs design values (colors, sizes, speeds, how
   something reacts), the user chooses them – say so in the challenge.
-- **Three difficulty steps relative to the user's level:**
-  1. *Warm-up* – a little below their level, one concept.
-  2. *Fitting* – at their level.
-  3. *Stretch* – one step above, at most one concept they haven't met yet.
+- **All three equally difficult, matched to the profile level.** They differ
+  in topic or area of the code, not in difficulty:
+  - *beginner* – one concept per challenge, in one function, few lines to change.
+  - *intermediate* – one or two related concepts, may touch two functions or
+    add a new one.
+  - *advanced* – may restructure code (e.g. a class, a new file), still one
+    clear goal.
+  Also match how the user is doing (see the index): after several
+  "solved with solution", make them simpler; after several done without hints,
+  a little more demanding.
 - **Use the notes:** prefer concepts that aren't in `notes.md` yet, or that
-  build on noted ones. Don't repeat a challenge from `challenges.md` (log).
+  build on noted ones. Don't repeat a challenge from `challenges.md`.
 - **Small enough to finish** in roughly 10–30 minutes, and limited to one area
   of the code.
 - Must fit the project's p5.js version, code style, AGENTS.md and tech scope
   (e.g. UI as HTML/CSS panel with `setupUI()`).
 
+### Write very clear assignments
+Each challenge must be understandable on first reading, without knowing the
+solution:
+- **One goal per challenge.** No "and also …".
+- **Concrete, not abstract:** name the file, the function and what exactly
+  should be different afterwards – the observable result (e.g. "the circle
+  size is set in one place"), not the technique to use.
+- **Plain words, short sentences.** Use the names from the user's code
+  (variables, functions) so they can find the spot. Explain technical terms the
+  user's level might not know, or avoid them.
+- **Verb-first title**, max. about 6 words (e.g. "Move the circle size into a
+  variable").
+
 Present them as a button question: "Which challenge would you like to try?"
-Each option: a short title (with Warm-up / Fitting / Stretch) and one sentence
-describing the task. The user may also type their own challenge – accept it if
-it's technical and fits the project.
+Each option: the title and one clear sentence saying what to change and where
+(e.g. "In sketch.js, replace the number 80 used for the circle size with one
+variable at the top of the file."). The user may also type their own
+challenge – accept it if it's technical and fits the project.
 
 ## 4. Start the challenge
 
@@ -199,7 +219,6 @@ File name: date plus the title in lowercase with hyphens, e.g.
 ```markdown
 # Challenge: Move sizes into CONFIGURATION
 - Status: open | paused | done | solved with solution | skipped
-- Difficulty: Warm-up | Fitting | Stretch
 - Level: beginner
 - Started: 2026-11-21
 - Files: js/sketch.js
@@ -242,10 +261,9 @@ A short overview, newest first, linking to each protocol:
 
 ```markdown
 # Coding challenges
-- 2026-11-21 · Move sizes into CONFIGURATION (Warm-up) · done · 1 hint · [protocol](challenges/2026-11-21_sizes-into-configuration.md)
-- 2026-11-20 · Shapes react to the mouse (Fitting) · solved with solution · [protocol](challenges/2026-11-20_shapes-react-to-mouse.md)
+- 2026-11-21 · Move sizes into CONFIGURATION · done · 1 hint · [protocol](challenges/2026-11-21_sizes-into-configuration.md)
+- 2026-11-20 · Shapes react to the mouse · solved with solution · [protocol](challenges/2026-11-20_shapes-react-to-mouse.md)
 ```
 
 Keep the status in the index in sync with the protocol. Use the index to avoid
-repeating challenges and to match the difficulty to how the user is doing
-(e.g. several "solved with solution" → suggest easier ones).
+repeating challenges and to fine-tune the difficulty (see step 3).
