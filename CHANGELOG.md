@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2
+
+- When you solve a coding challenge, you first get a review in the chat: what you did, what's good, what could be better, alternative solutions and the concepts practiced. Only then you're asked whether to do a new challenge or stop.
+
 ## 1.3.1
 
 - Coding mode offers three equally difficult challenges matched to your profile level (no more warm-up / stretch tiers).

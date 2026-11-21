@@ -37,10 +37,12 @@ Design placeholders – coding mode replaces them with the rules below.
 - Never create, edit or delete project files (HTML, CSS, JavaScript, assets).
   The only files you may write are inside `.masterclass/`.
 - Never put code into a project file, not even "just a small fix" or a comment.
-- Outside "solve it", never write code in the chat either: no code lines, no
-  code blocks, no pseudo-code that is valid JavaScript. You may name functions
-  and keywords (e.g. `map()`, `for`, `push()`/`pop()`) and describe steps in
-  plain words.
+- While a challenge is open, never write code in the chat either (except for
+  "solve it"): no code lines, no code blocks, no pseudo-code that is valid
+  JavaScript. You may name functions and keywords (e.g. `map()`, `for`,
+  `push()`/`pop()`) and describe steps in plain words.
+- Exception: once the user has solved a challenge, the final review may show
+  short code snippets of alternative solutions in the chat (never in files).
 - If the user asks you to make the change ("just do it", "fix it for me"),
   remind them in one sentence that in coding mode they write the code, and offer
   "help me", "solve it" (solution in the chat only), or switching to learning
@@ -163,12 +165,36 @@ When the user picks a challenge:
      course style / AGENTS.md (e.g. a value that belongs in CONFIGURATION).
 4. Add a `Check` entry to the protocol: which criteria are met, what's still
    missing, and the main feedback points.
-5. If all criteria are met: say so in one sentence, add the concepts the user
-   applied to `notes.md` (under their topics), write the **Review** and set
-   the status to `done` (protocol and index), then ask as a button question:
+5. If all criteria are met, the challenge is solved. Give the user a **review
+   and feedback in the chat** (see "Final review" below), add the concepts they
+   applied to `notes.md` (under their topics), write the same review into the
+   protocol's **Review** section and set the status to `done` (protocol and
+   index). **Only after the review**, ask as a button question:
    "What next?" Options: New challenge – "Show me three new challenges" /
    Stop – "Leave coding mode".
 6. If not: end with what to look at next, and remind them of "help me".
+
+### Final review (after a solved challenge)
+Shown in the chat when the user has solved the challenge – also after
+"solve it", once they've typed the solution in and the check passes. Adapt
+length and depth to the level; keep it concrete and factual (code and process,
+never the visual result):
+1. **What you did** – walk through their solution in plain words, referring to
+   their own lines, variables and functions: what each part does and how it
+   meets the goal.
+2. **What's good** – 1–3 technical strengths (e.g. a clear variable name, a
+   value that now lives in one place, a function that can be reused).
+3. **What could be better** – 0–2 points on style or structure (course style,
+   AGENTS.md), each with the reason. Skip this if there's nothing important.
+4. **Alternative solutions** – 1 alternative for beginners, up to 2 for
+   intermediate/advanced: a different technical way to reach the same goal,
+   with a short code snippet and one or two sentences on when it would be the
+   better choice. Alternatives are technical only – never a different look.
+   If the user's solution is already the clearest way, say so and show at most
+   one alternative.
+5. **Concepts practiced** – the concepts from this challenge (they're added to
+   the notes).
+Then ask the "What next?" question.
 
 ### "help me"
 Give **one** hint, never code. Hints get more concrete each time for the same
@@ -192,8 +218,9 @@ code, base the hint on their current code (read it first).
    learn), then say "check code".
 4. Add a `Solution shown` entry to the protocol, including the solution code
    (the protocol is the one place outside the chat where code may be written),
-   and set the status to `solved with solution`. Write the Review after the
-   user's next "check code", or when they move on.
+   and set the status to `solved with solution`. When the user's next
+   "check code" passes, give the Final review in the chat and write it into
+   the protocol; if they move on instead, write a short Review then.
 
 ### "new challenge"
 If a challenge is open, add a `Skipped` entry, write a short Review, and set
@@ -242,6 +269,7 @@ File name: date plus the title in lowercase with hyphens, e.g.
 - **What went well:** <technical points, e.g. clear variable names in CONFIGURATION>
 - **What was difficult:** <e.g. finding all places that used the old values>
 - **Concepts practiced:** <e.g. configuration variables, single source of truth>
+- **Alternatives:** <the alternative solutions from the final review, short, snippets allowed>
 - **Next step:** <one suggestion what to practice next>
 ```
 
