@@ -239,15 +239,19 @@ Every challenge gets a **protocol**, written during the session, so the user
 (and the course instructor) can review it afterwards. Update it right after
 each event – don't wait until the end, because the chat may be closed anytime.
 
-### Protocol: `.masterclass/challenges/<date>_<short-title>.md`
-File name: date plus the title in lowercase with hyphens, e.g.
-`2026-11-21_sizes-into-configuration.md`.
+**No dates or times.** Never run a terminal command (e.g. `date`) to get the
+date or time – it would make the user approve a permission prompt. Challenges
+and protocol entries are numbered instead.
+
+### Protocol: `.masterclass/challenges/<nn>_<short-title>.md`
+File name: the next two-digit number (count the entries in the index, plus 1)
+and the title in lowercase with hyphens, e.g.
+`03_sizes-into-configuration.md`.
 
 ```markdown
-# Challenge: Move sizes into CONFIGURATION
+# Challenge 03: Move sizes into CONFIGURATION
 - Status: open | paused | done | solved with solution | skipped
 - Level: beginner
-- Started: 2026-11-21
 - Files: js/sketch.js
 
 ## Task
@@ -258,11 +262,11 @@ File name: date plus the title in lowercase with hyphens, e.g.
 - <criterion 2>
 
 ## Protocol
-- 15:42 · Started
-- 15:58 · Check – 1 of 2 criteria met: variables declared, but setup() still
-  uses the old numbers (line 24, 27).
-- 16:03 · Hint (level 1) – Look at every place the old numbers are used.
-- 16:10 · Check – all criteria met.
+1. Started
+2. Check – 1 of 2 criteria met: variables declared, but setup() still uses the
+   old numbers (line 24, 27).
+3. Hint (level 1) – Look at every place the old numbers are used.
+4. Check – all criteria met.
 
 ## Review
 - **Result:** done after 2 checks and 1 hint.
@@ -275,8 +279,9 @@ File name: date plus the title in lowercase with hyphens, e.g.
 
 Rules for the protocol:
 - Entry types: `Started`, `Resumed`, `Check`, `Hint (level n)`,
-  `Solution shown`, `Skipped`, `Paused`. Each entry: time · type – one or two
-  factual sentences.
+  `Solution shown`, `Skipped`, `Paused`. Each entry: a numbered list item,
+  type – one or two factual sentences. Continue the numbering when a
+  challenge is resumed.
 - The protocol records what happened and what the user did – it never judges
   the look or the design decisions.
 - Write the **Review** when the challenge ends (done, solved with solution,
@@ -289,8 +294,8 @@ A short overview, newest first, linking to each protocol:
 
 ```markdown
 # Coding challenges
-- 2026-11-21 · Move sizes into CONFIGURATION · done · 1 hint · [protocol](challenges/2026-11-21_sizes-into-configuration.md)
-- 2026-11-20 · Shapes react to the mouse · solved with solution · [protocol](challenges/2026-11-20_shapes-react-to-mouse.md)
+- 03 · Move sizes into CONFIGURATION · done · 1 hint · [protocol](challenges/03_sizes-into-configuration.md)
+- 02 · Shapes react to the mouse · solved with solution · [protocol](challenges/02_shapes-react-to-mouse.md)
 ```
 
 Keep the status in the index in sync with the protocol. Use the index to avoid

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+
+- Challenge protocols use running numbers instead of dates and times, so no terminal command (and no permission prompt) is needed.
+
 ## 1.3.2
 
 - When you solve a coding challenge, you first get a review in the chat: what you did, what's good, what could be better, alternative solutions and the concepts practiced. Only then you're asked whether to do a new challenge or stop.

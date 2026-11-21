@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 1.3.2** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 1.3.3** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -169,7 +169,7 @@ Typography, Motion & time), so you can find things again. When you choose
 **Review** after starting `learn`, you can pick a topic to be quizzed on.
 
 Coding mode writes a **protocol** for every challenge in `.masterclass/challenges/`:
-the task, every check, hint and solution with a timestamp, and a short review at the
+the task, every check, hint and solution in order, and a short review at the
 end (result, what went well, what was difficult, concepts practiced, next step).
 `challenges.md` is the overview with links to all protocols, and `challenge-start/`
 keeps a copy of your files from when the current challenge started. An unfinished
