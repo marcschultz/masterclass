@@ -72,9 +72,9 @@ Then check `.masterclass/challenges.md` (the index, see "Challenge files"):
 ## 2. Understand the project
 
 Read the project's code before suggesting anything: index.html, every script
-it loads (e.g. js/sketch.js, js/ui.js), and the CSS. Then tell the user in
-2–3 plain sentences what the sketch currently does and how the code is
-organized (files, main functions, classes). No praise, no judgment of the look.
+it loads (e.g. js/sketch.js, js/ui.js), and the CSS. Understand what the
+sketch does and how the code is organized – but **don't summarize it for the
+user**. Go straight to the challenge question in step 3.
 
 If the project is (almost) empty – only the course template or a few lines –
 there's nothing to derive challenges from. Tell the user in one or two
@@ -123,8 +123,9 @@ solution:
 - **Verb-first title**, max. about 6 words (e.g. "Move the circle size into a
   variable").
 
-Present them as a button question: "Which challenge would you like to try?"
-Each option: the title and one clear sentence saying what to change and where
+Present them as a button question with only the question
+"Which challenge would you like to try?" on top – no intro, no summary of the
+project, no other text before or in the question. Each option: the title and one clear sentence saying what to change and where
 (e.g. "In sketch.js, replace the number 80 used for the circle size with one
 variable at the top of the file."). The user may also type their own
 challenge – accept it if it's technical and fits the project.

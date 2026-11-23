@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 1.4.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 1.4.1** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -63,8 +63,8 @@ Learning mode and coding mode are opt-in: they only start when you invoke them i
 and how to handle design placeholders, and detects the p5.js version, UI approach and
 libraries. Later, it summarizes where you left off.
 
-**coding** – You write the code yourself. The AI reads your project, explains what it
-does, and suggests three clear challenges of the same difficulty, matched to your level and
+**coding** – You write the code yourself. The AI reads your project and
+suggests three clear challenges of the same difficulty, matched to your level and
 based on your code. After you pick one, it explains the task and the rules – and never edits your files.
 Coding mode needs existing code: in an empty project, open one of the course's example
 projects first.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1
+
+- Coding mode goes straight to the challenge choice: no summary of the project before the three options.
+
 ## 1.4.0
 
 - Coding mode writes no files during a challenge: protocol, overview and notes are written once, when the challenge ends (solved, skipped or paused) – fewer permission prompts.
