@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+- Coding mode writes no files during a challenge: protocol, overview and notes are written once, when the challenge ends (solved, skipped or paused) – fewer permission prompts.
+- Coding mode no longer talks about note taking or protocols in the chat.
+- No more `challenge-start/` copy: the start state of the code is kept in the conversation.
+
 ## 1.3.3
 
 - Challenge protocols use running numbers instead of dates and times, so no terminal command (and no permission prompt) is needed.

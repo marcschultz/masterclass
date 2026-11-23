@@ -65,7 +65,8 @@ Then check `.masterclass/challenges.md` (the index, see "Challenge files"):
   Options: Continue – "Keep working on it" /
   New challenge – "Show me three new challenges" /
   Stop – "Close it and leave coding mode"
-  On Continue, add a `Resumed` entry to the protocol.
+  On Continue, read the current code as the new start state and keep
+  collecting protocol entries (starting with `Resumed`).
 - Otherwise continue with step 2.
 
 ## 2. Understand the project
@@ -132,15 +133,15 @@ challenge – accept it if it's technical and fits the project.
 
 When the user picks a challenge:
 
-1. **Start the protocol** (see "Challenge files" below): create the protocol
-   file with the header, task and "Done when", add a `Started` entry, and add
-   the challenge to the index with status `open`. Copy the files the user will
-   change into `.masterclass/challenge-start/` (same relative paths, replacing
-   any older copy), so "check code" can compare against the start.
+1. **Remember the start state** – don't write any files now. Read the files
+   the user will change and keep their content in mind as the start state, so
+   "check code" can see what changed. From now on, collect the protocol entries
+   in your memory of this conversation (starting with `Started`); they are
+   written to disk only when the challenge ends (see "Challenge files").
 2. **Explain the challenge** in the chat, short and clear:
    - **Your task** – what to achieve, in plain words.
    - **Where** – file and function(s) to work in.
-   - **Done when** – the criteria from the protocol.
+   - **Done when** – the criteria for the challenge.
    - **Concepts you'll need** – 1–3 function or concept names, without code.
 3. **Explain the rules and keywords** (adapt the wording to the user's tool):
    - You write all the code. I won't change your files.
@@ -154,7 +155,7 @@ When the user picks a challenge:
 
 ### "check code"
 1. Re-read the challenge files from disk (remind the user to save if nothing
-   changed) and compare them with `.masterclass/challenge-start/`.
+   changed) and compare them with the start state.
 2. If anything is unclear about the result on screen, ask the user what they
    see or whether the browser console shows errors – you can't see the canvas.
 3. Give feedback in this order, adapted to the level:
@@ -163,13 +164,13 @@ When the user picks a challenge:
      explain *why* it doesn't work yet. Don't write the corrected code.
    - **Style and structure** – only the most important 1–2 points from the
      course style / AGENTS.md (e.g. a value that belongs in CONFIGURATION).
-4. Add a `Check` entry to the protocol: which criteria are met, what's still
-   missing, and the main feedback points.
+4. Remember a `Check` entry for the protocol: which criteria are met, what's
+   still missing, and the main feedback points.
 5. If all criteria are met, the challenge is solved. Give the user a **review
-   and feedback in the chat** (see "Final review" below), add the concepts they
-   applied to `notes.md` (under their topics), write the same review into the
-   protocol's **Review** section and set the status to `done` (protocol and
-   index). **Only after the review**, ask as a button question:
+   and feedback in the chat** (see "Final review" below). Then write the
+   challenge files in one go (protocol with this review, index, notes – see
+   "Challenge files"), without mentioning it. **Only after the review**, ask as
+   a button question:
    "What next?" Options: New challenge – "Show me three new challenges" /
    Stop – "Leave coding mode".
 6. If not: end with what to look at next, and remind them of "help me".
@@ -192,14 +193,13 @@ never the visual result):
    better choice. Alternatives are technical only – never a different look.
    If the user's solution is already the clearest way, say so and show at most
    one alternative.
-5. **Concepts practiced** – the concepts from this challenge (they're added to
-   the notes).
+5. **Concepts practiced** – the concepts from this challenge.
 Then ask the "What next?" question.
 
 ### "help me"
 Give **one** hint, never code. Hints get more concrete each time for the same
-challenge (count the `Hint` entries in the protocol; add one for each hint,
-with its level and the hint in a sentence):
+challenge (count the hints you've given in this challenge; remember a `Hint`
+entry for the protocol with its level and the hint in a sentence):
 1. **Direction** – which concept or idea solves the problem.
 2. **Where and what** – which function(s) to use and where in the code.
 3. **Steps in words** – the steps in plain language, one by one, still without
@@ -216,28 +216,41 @@ code, base the hint on their current code (read it first).
    never write it to a file. Explain the key lines briefly.
 3. Ask the user to type it into their file themselves (typing it helps them
    learn), then say "check code".
-4. Add a `Solution shown` entry to the protocol, including the solution code
-   (the protocol is the one place outside the chat where code may be written),
-   and set the status to `solved with solution`. When the user's next
-   "check code" passes, give the Final review in the chat and write it into
-   the protocol; if they move on instead, write a short Review then.
+4. Remember a `Solution shown` entry for the protocol, including the solution
+   code (the protocol is the one place outside the chat where code may be
+   written); the result will be `solved with solution`. When the user's next
+   "check code" passes, give the Final review in the chat and then write the
+   challenge files; if they move on instead, write them with a short Review.
 
 ### "new challenge"
-If a challenge is open, add a `Skipped` entry, write a short Review, and set
-the status to `skipped`. Then go back to step 2 (re-read the code – it may have
+If a challenge is open, write its challenge files with a `Skipped` entry, a
+short Review and the status `skipped`. Then go back to step 2 (re-read the code – it may have
 changed) and step 3.
 
 ### "stop coding"
-If a challenge is open, add a `Paused` entry with where the user stands and
-what's left, and set the status to `paused` (it can be continued next time).
+If a challenge is open, write its challenge files with a `Paused` entry
+(where the user stands and what's left) and the status `paused`, so it can be
+continued next time. No Review yet.
 Say in one sentence how to come back (`/masterclass:coding`) and leave coding
 mode. From now on, work normally.
 
 ## Challenge files
 
-Every challenge gets a **protocol**, written during the session, so the user
-(and the course instructor) can review it afterwards. Update it right after
-each event – don't wait until the end, because the chat may be closed anytime.
+Every challenge gets a **protocol**, so the user (and the course instructor)
+can review it afterwards.
+
+**Write files only once, at the end – and silently.** Every file write may make
+the user approve a permission, so during a challenge you write nothing at all.
+Collect the protocol entries in your memory of the conversation, and write all
+challenge files in **one go** when the challenge ends:
+- solved (after the Final review) → status `done` or `solved with solution`
+- "new challenge" while one is open → `skipped`
+- "stop coding" while one is open → `paused`
+
+In that one step, write: the protocol, the index entry, and – for solved
+challenges – the new concepts in `notes.md` (under their topics).
+**Don't talk about notes, protocols or files** in the chat – no "I'll note
+this", "saved to your protocol" or similar. Just do it at the end.
 
 **No dates or times.** Never run a terminal command (e.g. `date`) to get the
 date or time – it would make the user approve a permission prompt. Challenges
