@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.1** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.2** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -73,7 +73,7 @@ projects first.
 setup again. Your sketch files are never touched.
 
 **new-project** – Creates an empty project from the course template
-(`index.html`, `css/style.css`, `js/sketch.js`, `AGENTS.md`, `libraries/`). It asks
+(`index.html`, `css/style.css`, `js/sketch.js`, `AGENTS.md`, an empty `assets/` folder, `libraries/`). It asks
 whether to use p5.js 1.x or 2.x, downloads the latest stable version into `libraries/`,
 and fills in the AGENTS.md for that version. If the download fails, you can copy
 p5.js from another project or add it yourself.

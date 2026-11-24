@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2
+
+- `new-project` now also creates an empty `assets/` folder.
+
 ## 2.0.1
 
 - Design placeholders setup question: options now run from fewest to most questions (Neutral placeholders → Fill small details → Always ask), with the recommended Fill small details in the middle – the same pattern as Checkpoints.

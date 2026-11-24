@@ -65,8 +65,13 @@ Create the folder and copy the template files into it, keeping the structure:
 ├── AGENTS.md
 ├── css/style.css
 ├── js/sketch.js
+├── assets/
 └── libraries/
 ```
+
+Also create the empty `assets/` folder (for images, fonts and data the user
+adds later). Use `mkdir -p "<folder>/assets"`; if your tools can't create an
+empty folder, tell the user to create it.
 
 Create the files with your file tools (not shell redirection). Copy everything
 exactly – comments, blank lines and markers included – and replace:
@@ -120,7 +125,8 @@ Replace the placeholders in the new project's AGENTS.md:
   - for 1.x: `Load assets (images, fonts, data) in preload(). Don't use p5.js 2.x APIs.`
   - for 2.x: `Load assets (images, fonts, data) with async setup() and await; there is no preload(). Many tutorials use 1.x syntax – translate it to 2.x.`
 
-Check that no `{{…}}` placeholder is left in any file.
+Check that no `{{…}}` placeholder is left in any file and that `assets/`
+exists.
 
 ## 7. Finish
 
