@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1
+
+- Design placeholders setup question: options now run from fewest to most questions (Neutral placeholders → Fill small details → Always ask), with the recommended Fill small details in the middle – the same pattern as Checkpoints.
+- Profile settings renamed to **Experience Level**, **Checkpoints** and **Design Decisions** (formerly "Level" and "Design placeholders"). Older profiles are updated automatically on the next start; values stay the same.
+
 ## 2.0.0
 
 - **Renamed commands:** `learn` is now **`build`** (build mode – the AI codes with you) and `coding` is now **`challenge`** (challenge mode – you write the code yourself).

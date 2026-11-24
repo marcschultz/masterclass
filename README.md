@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.1** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -59,8 +59,8 @@ Build mode and challenge mode are opt-in: they only start when you invoke them i
 | Reset profile and notes | `/masterclass:reset` | `$masterclass:reset` | `/` menu → reset |
 | New empty project | `/masterclass:new-project` | `$masterclass:new-project` | `/` menu → new-project |
 
-**build** – The first time in a project, it asks for your level, checkpoint frequency
-and how to handle design placeholders, and detects the p5.js version, UI approach and
+**build** – The first time in a project, it asks for your Experience Level, Checkpoints
+and Design Decisions settings, and detects the p5.js version, UI approach and
 libraries. Later, it summarizes where you left off.
 
 **challenge** – You write the code yourself. The AI reads your project and
@@ -95,7 +95,7 @@ p5.js from another project or add it yourself.
 | "just implement this one" | Skips the checkpoints for this one step. |
 | "no quizzes" | No more quick quiz questions this session. |
 | "pause build" | Build mode off until you start build again. |
-| "always ask" / "use placeholders" / "fill small details" | Changes how design placeholders are handled. |
+| "use placeholders" / "fill small details" / "always ask" | Changes the Design Decisions setting. |
 | "design check" | The AI looks for design decisions it made for you, takes them back and asks you instead. |
 
 ## How it works
@@ -108,13 +108,13 @@ or designs. It handles the technical side and asks you targeted questions to get
 your decisions. If you ask it to decide ("make it look nice"), it reminds you in one
 sentence that you're the designer, then asks what it needs to know.
 
-How it handles values you haven't decided yet is a profile setting:
+How it handles values you haven't decided yet is the **Design Decisions** profile setting:
 
 | Setting | Behavior |
 |---|---|
-| Always ask | Asks before using any design value. No placeholders. |
 | Neutral placeholders | Uses grays / p5.js defaults, marks them `// TODO: your choice`, lists them after each step. |
-| Fill small details | Asks for everything that shapes the look; placeholders only for minor details. |
+| Fill small details | Asks for everything that shapes the look; placeholders only for minor details. Recommended. |
+| Always ask | Asks before using any design value. No placeholders. |
 
 ### Checkpoints
 

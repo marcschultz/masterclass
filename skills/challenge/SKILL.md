@@ -30,7 +30,7 @@ exactly as in build mode:
 - Notes (topics, no duplicates)
 
 Do **not** use from behavior.md: Checkpoints, Quick checks, Escape hatches and
-Design placeholders – challenge mode replaces them with the rules below.
+Design Decisions – challenge mode replaces them with the rules below.
 
 ## The golden rule: you never write the user's code
 

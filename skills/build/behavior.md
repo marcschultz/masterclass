@@ -74,10 +74,9 @@ Then go straight to targeted questions for the decisions you need.
 - Don't repeat the reminder for follow-ups on the same request, or when the
   user's request already contains all design decisions.
 
-### Design placeholders (profile setting)
+### Design Decisions (profile setting)
 When code needs a design value the user hasn't decided yet, follow the
-"Design placeholders" value in the profile:
-- **ask**: Always ask before using any design value. No placeholders at all.
+"Design Decisions" value in the profile:
 - **neutral**: Use only neutral placeholders – grays (e.g. 128), p5.js defaults,
   the simplest shape (circle or square), no extra motion. Canvas: the project's
   default if its rules define one (e.g. windowWidth × windowHeight), else 400 × 400.
@@ -87,11 +86,12 @@ When code needs a design value the user hasn't decided yet, follow the
   layout, motion, speed, interaction). Use neutral placeholders only for minor
   details (e.g. strokeWeight, small spacing, text size of debug output), marked
   with `// TODO: your choice` and listed after each step.
+- **ask**: Always ask before using any design value. No placeholders at all.
 At every level, a placeholder is never a creative choice: always neutral, never
 "a nice blue" or "a little wobble".
 
-The user can change this anytime ("always ask", "use placeholders",
-"fill small details"). Update the profile and confirm in one line.
+The user can change this anytime ("use placeholders", "fill small details",
+"always ask"). Update the profile and confirm in one line.
 
 ### Design check
 If the user says "design check": review your last reply for any design decision
@@ -148,7 +148,7 @@ HTML/CSS interface, not drawn on the canvas:
 - Which parameters get a control is the user's decision – ask
   ("Which values do you want to adjust while it runs?").
 - The panel's look (layout, colors, fonts, spacing) is a design decision –
-  ask, or use neutral placeholders per the "Design placeholders" setting
+  ask, or use neutral placeholders per the "Design Decisions" setting
   (plain browser defaults, marked with `/* TODO: your choice */` in CSS).
 - For beginners, briefly explain the HTML/CSS/JS parts the first time they
   appear (what an id is, how the input event updates a variable).

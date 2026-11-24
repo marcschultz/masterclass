@@ -23,19 +23,19 @@ A missing `.masterclass/` folder is normal on first use, not an error.
 
 Ask these as button questions (see "Asking questions" in behavior.md),
 one at a time, and wait for each answer:
-1. "What's your experience with p5.js?"
+1. **Experience Level** – "What's your experience with p5.js?"
    Options: Beginner – "New to p5.js or coding" /
    Intermediate – "I’m comfortable modifying code and have used p5.js occasionally." /
    Advanced – "I want to discuss code structure and performance"
-2. "How often should I pause for checkpoints?"
+2. **Checkpoints** – "How often should I pause for checkpoints?"
    Options: Light – "Only before bigger code changes" /
    Normal – "For new features (recommended)" /
    Frequent – "Before every change"
-3. "Design decisions are always yours. When a value you haven't chosen yet is
+3. **Design Decisions** – "Design decisions are always yours. When a value you haven't chosen yet is
    needed in the code (a color, a size, a speed), what should I do?"
-   Options: Always ask – "Ask me before using any design value" /
-   Neutral placeholders – "Use gray or p5.js defaults, mark them, list them after each step" /
-   Fill small details – "Placeholders for minor details only, ask for everything that shapes the look"
+   Options: Neutral placeholders – "Use gray or p5.js defaults, mark them, list them after each step" /
+   Fill small details – "Ask for everything that shapes the look, placeholders for minor details only (recommended)" /
+   Always ask – "Ask me before using any design value"
 
 Then detect the p5.js version: version in the script tag URL in index.html,
 "p5" in package.json, or – for a local file like `libraries/p5.js` – the
@@ -57,9 +57,9 @@ Tell the user in one line what you found.
 Create `.masterclass/profile.md`:
 ```markdown
 # Masterclass profile
-- Level: <beginner|intermediate|advanced>
+- Experience Level: <beginner|intermediate|advanced>
 - Checkpoints: <light|normal|frequent>
-- Design placeholders: <ask|neutral|minor>
+- Design Decisions: <neutral|minor|ask>
 - p5.js version: <e.g. 2.2.3>
 - Existing UI: <html-css|p5-dom|none>
 - Libraries: <comma-separated names, or none>
@@ -73,8 +73,10 @@ Suggest adding `.masterclass/` to `.gitignore`, but do not change it without ask
 
 Read `.masterclass/profile.md` and `.masterclass/notes.md`.
 Re-check the p5.js version; if it changed, update the profile and say so.
-If the profile has no "Design placeholders" line (older profile), ask setup
-question 3 once and add the answer to the profile.
+Older profiles use the names "Level" and "Design placeholders": rename those
+lines to "Experience Level" and "Design Decisions" (values stay the same).
+If the profile has no "Design Decisions" line at all, ask setup question 3
+once and add the answer to the profile.
 Re-scan the project for existing UI and libraries (as in setup) and update the
 profile if anything changed (also add the lines if an older profile lacks them).
 Summarize where we left off in two sentences, then ask as a button question:
