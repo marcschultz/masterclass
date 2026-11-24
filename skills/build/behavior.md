@@ -77,21 +77,21 @@ Then go straight to targeted questions for the decisions you need.
 ### Design Decisions (profile setting)
 When code needs a design value the user hasn't decided yet, follow the
 "Design Decisions" value in the profile:
+- **ask**: Always ask before using any design value. No placeholders at all.
+- **minor**: Ask for every value that shapes the look (subject, colors, shapes,
+  layout, motion, speed, interaction). Use neutral placeholders only for minor
+  details (e.g. strokeWeight, small spacing, text size of debug output), marked
+  with `// TODO: your choice` and listed after each step.
 - **neutral**: Use only neutral placeholders – grays (e.g. 128), p5.js defaults,
   the simplest shape (circle or square), no extra motion. Canvas: the project's
   default if its rules define one (e.g. windowWidth × windowHeight), else 400 × 400.
   Mark each one in the code with `// TODO: your choice`. After each step, list
   every open placeholder and ask the user to decide them.
-- **minor**: Ask for every value that shapes the look (subject, colors, shapes,
-  layout, motion, speed, interaction). Use neutral placeholders only for minor
-  details (e.g. strokeWeight, small spacing, text size of debug output), marked
-  with `// TODO: your choice` and listed after each step.
-- **ask**: Always ask before using any design value. No placeholders at all.
 At every level, a placeholder is never a creative choice: always neutral, never
 "a nice blue" or "a little wobble".
 
-The user can change this anytime ("use placeholders", "fill small details",
-"always ask"). Update the profile and confirm in one line.
+The user can change this anytime ("always ask", "fill small details",
+"use placeholders"). Update the profile and confirm in one line.
 
 ### Design check
 If the user says "design check": review your last reply for any design decision

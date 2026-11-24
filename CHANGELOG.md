@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+- Setup questions: options now run from the most guidance to the least, like Experience Level – Checkpoints: Frequent → Normal → Light; Design Decisions: Always ask → Fill small details → Neutral placeholders. The recommended options stay in the middle.
+
 ## 2.0.2
 
 - `new-project` now also creates an empty `assets/` folder.

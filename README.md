@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.2** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.3** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -95,7 +95,7 @@ p5.js from another project or add it yourself.
 | "just implement this one" | Skips the checkpoints for this one step. |
 | "no quizzes" | No more quick quiz questions this session. |
 | "pause build" | Build mode off until you start build again. |
-| "use placeholders" / "fill small details" / "always ask" | Changes the Design Decisions setting. |
+| "always ask" / "fill small details" / "use placeholders" | Changes the Design Decisions setting. |
 | "design check" | The AI looks for design decisions it made for you, takes them back and asks you instead. |
 
 ## How it works
@@ -112,9 +112,9 @@ How it handles values you haven't decided yet is the **Design Decisions** profil
 
 | Setting | Behavior |
 |---|---|
-| Neutral placeholders | Uses grays / p5.js defaults, marks them `// TODO: your choice`, lists them after each step. |
-| Fill small details | Asks for everything that shapes the look; placeholders only for minor details. Recommended. |
 | Always ask | Asks before using any design value. No placeholders. |
+| Fill small details | Asks for everything that shapes the look; placeholders only for minor details. Recommended. |
+| Neutral placeholders | Uses grays / p5.js defaults, marks them `// TODO: your choice`, lists them after each step. |
 
 ### Checkpoints
 

@@ -22,20 +22,21 @@ A missing `.masterclass/` folder is normal on first use, not an error.
 ## 2a. First time: setup
 
 Ask these as button questions (see "Asking questions" in behavior.md),
-one at a time, and wait for each answer:
+one at a time, and wait for each answer. Keep the option order: in every
+question, the option with the most guidance comes first.
 1. **Experience Level** – "What's your experience with p5.js?"
    Options: Beginner – "New to p5.js or coding" /
    Intermediate – "I’m comfortable modifying code and have used p5.js occasionally." /
    Advanced – "I want to discuss code structure and performance"
 2. **Checkpoints** – "How often should I pause for checkpoints?"
-   Options: Light – "Only before bigger code changes" /
+   Options: Frequent – "Before every change" /
    Normal – "For new features (recommended)" /
-   Frequent – "Before every change"
+   Light – "Only before bigger code changes"
 3. **Design Decisions** – "Design decisions are always yours. When a value you haven't chosen yet is
    needed in the code (a color, a size, a speed), what should I do?"
-   Options: Neutral placeholders – "Use gray or p5.js defaults, mark them, list them after each step" /
+   Options: Always ask – "Ask me before using any design value" /
    Fill small details – "Ask for everything that shapes the look, placeholders for minor details only (recommended)" /
-   Always ask – "Ask me before using any design value"
+   Neutral placeholders – "Use gray or p5.js defaults, mark them, list them after each step"
 
 Then detect the p5.js version: version in the script tag URL in index.html,
 "p5" in package.json, or – for a local file like `libraries/p5.js` – the
