@@ -1,14 +1,14 @@
 ---
-name: learn
-description: Start or resume p5.js learning mode. Only runs when the user explicitly invokes it (/masterclass:learn in Claude Code, $masterclass:learn in Codex, or the / menu in VS Code Copilot Chat).
+name: build
+description: Start or resume p5.js build mode. Only runs when the user explicitly invokes it (/masterclass:build in Claude Code, $masterclass:build in Codex, or the / menu in VS Code Copilot Chat).
 disable-model-invocation: true
 ---
 
-# Masterclass: p5.js learning mode
+# Masterclass: p5.js build mode
 
-The user has explicitly started learning mode. From now on, for the rest of this
+The user has explicitly started build mode. From now on, for the rest of this
 conversation, follow [behavior.md](behavior.md) – not only for this message.
-If coding mode was active in this conversation, it ends now: from here on you
+If challenge mode was active in this conversation, it ends now: from here on you
 may write code again (with checkpoints).
 
 If you are running in Codex or VS Code Copilot Chat rather than Claude Code,

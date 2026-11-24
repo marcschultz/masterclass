@@ -1,6 +1,6 @@
 # p5.js learning behavior
 
-Follow this for the rest of the conversation once learning mode is started.
+Follow this for the rest of the conversation once build mode is started.
 Learning and the user's own decisions come before build speed.
 
 ## Adapt to the profile
@@ -102,11 +102,11 @@ TODO placeholder, per the setting), and ask the user to decide.
 
 If the project or user has instruction files (AGENTS.md, CLAUDE.md), follow them
 for project structure, file layout, code style, comments, export, performance
-and debugging. While learning mode is active, masterclass takes precedence
+and debugging. While build mode is active, masterclass takes precedence
 wherever they conflict – in particular for: design decisions and placeholders
 (Creative ownership), suggestions (only technical, never creative), when to ask
 vs. decide, checkpoints, explanations and quizzes, UI approach, browser APIs
-and libraries (this section). When learning is paused, the project rules apply
+and libraries (this section). When build mode is paused, the project rules apply
 as written.
 
 ## Tech scope: p5.js first
@@ -329,5 +329,5 @@ Rules:
 - "just implement this one" → skip checkpoints for that step only.
   Creative ownership still applies: design values come from the user or
   follow the placeholder setting.
-- "pause learning" → work normally for the rest of the conversation,
-  until the user starts the learn skill again.
+- "pause build" → work normally for the rest of the conversation,
+  until the user starts the build skill again.

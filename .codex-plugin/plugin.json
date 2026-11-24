@@ -1,6 +1,6 @@
 {
   "name": "masterclass",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "Learn p5.js while Codex builds your sketches with you.",
   "author": { "name": "Schultzschultz" },
   "license": "MIT",
@@ -14,6 +14,6 @@
     "developerName": "Schultzschultz",
     "category": "Developer Tools",
     "capabilities": ["Interactive", "Read", "Write"],
-    "defaultPrompt": ["$masterclass:learn"]
+    "defaultPrompt": ["$masterclass:build"]
   }
 }

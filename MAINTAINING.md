@@ -10,14 +10,15 @@ masterclass/
 ├── .codex-plugin/         Codex manifest
 ├── .agents/plugins/       Codex marketplace
 └── skills/
-    ├── learn/             start/resume, behavior, references (versions, course style)
+    ├── build/             build mode: start/resume, behavior, references (versions, course style)
+    ├── challenge/         challenge mode: you write the code
     ├── reset/             back up notes and restart setup
     └── new-project/       empty project from the course template (template/)
 ```
 
-- Learning behavior: `skills/learn/behavior.md`
-- Course code style: `skills/learn/references/course-style.md`
-- p5.js version notes: `skills/learn/references/p5-v1.md`, `p5-v2.md`, `migration.md`
+- Build mode behavior (shared by challenge mode): `skills/build/behavior.md`
+- Course code style: `skills/build/references/course-style.md`
+- p5.js version notes: `skills/build/references/p5-v1.md`, `p5-v2.md`, `migration.md`
 - New-project template incl. AGENTS.md: `skills/new-project/template/`
 
 ## Testing changes before publishing
@@ -28,7 +29,7 @@ Test your working copy directly, without installing it:
 claude --plugin-dir ~/dev/masterclass
 ```
 
-Run this in a p5.js test project, then try `/masterclass:learn` and `/masterclass:new-project`.
+Run this in a p5.js test project, then try `/masterclass:build` and `/masterclass:new-project`.
 
 ## Releasing a new version
 

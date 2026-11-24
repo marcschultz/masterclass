@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 1.4.1** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.0** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -50,23 +50,23 @@ What's new in each version: see [CHANGELOG.md](CHANGELOG.md).
 
 ## Commands
 
-Learning mode and coding mode are opt-in: they only start when you invoke them in a session.
+Build mode and challenge mode are opt-in: they only start when you invoke them in a session.
 
 | Action | Claude Code | Codex | Copilot Chat |
 |---|---|---|---|
-| Start / resume learning | `/masterclass:learn` | `$masterclass:learn` | `/` menu → learn |
-| Coding mode (you write the code) | `/masterclass:coding` | `$masterclass:coding` | `/` menu → coding |
+| Build mode (the AI codes with you) | `/masterclass:build` | `$masterclass:build` | `/` menu → build |
+| Challenge mode (you write the code) | `/masterclass:challenge` | `$masterclass:challenge` | `/` menu → challenge |
 | Reset profile and notes | `/masterclass:reset` | `$masterclass:reset` | `/` menu → reset |
 | New empty project | `/masterclass:new-project` | `$masterclass:new-project` | `/` menu → new-project |
 
-**learn** – The first time in a project, it asks for your level, checkpoint frequency
+**build** – The first time in a project, it asks for your level, checkpoint frequency
 and how to handle design placeholders, and detects the p5.js version, UI approach and
 libraries. Later, it summarizes where you left off.
 
-**coding** – You write the code yourself. The AI reads your project and
+**challenge** – You write the code yourself. The AI reads your project and
 suggests three clear challenges of the same difficulty, matched to your level and
 based on your code. After you pick one, it explains the task and the rules – and never edits your files.
-Coding mode needs existing code: in an empty project, open one of the course's example
+Challenge mode needs existing code: in an empty project, open one of the course's example
 projects first.
 
 **reset** – Backs up your profile and notes to `.masterclass.backup/` and runs the
@@ -78,7 +78,7 @@ whether to use p5.js 1.x or 2.x, downloads the latest stable version into `libra
 and fills in the AGENTS.md for that version. If the download fails, you can copy
 p5.js from another project or add it yourself.
 
-### Things you can say in coding mode
+### Things you can say in challenge mode
 
 | Say | What happens |
 |---|---|
@@ -86,15 +86,15 @@ p5.js from another project or add it yourself.
 | "help me" | A hint, never code. Ask again for a more concrete hint. |
 | "solve it" | A complete solution, shown in the chat only. You type it in yourself. |
 | "new challenge" | Three new suggestions. |
-| "stop coding" | Leaves coding mode; an open challenge is kept for next time. |
+| "stop challenge" | Leaves challenge mode; an open challenge is kept for next time. |
 
-### Things you can say in learning mode
+### Things you can say in build mode
 
 | Say | What happens |
 |---|---|
 | "just implement this one" | Skips the checkpoints for this one step. |
 | "no quizzes" | No more quick quiz questions this session. |
-| "pause learning" | Learning mode off until you start learn again. |
+| "pause build" | Build mode off until you start build again. |
 | "always ask" / "use placeholders" / "fill small details" | Changes how design placeholders are handled. |
 | "design check" | The AI looks for design decisions it made for you, takes them back and asks you instead. |
 
@@ -155,7 +155,7 @@ comments, template markers and formatting. Files you create get a header without
 a copyright line.
 
 Your project's AGENTS.md still applies for structure, code style, export, performance
-and debugging. While learning mode is active, masterclass takes precedence where they
+and debugging. While build mode is active, masterclass takes precedence where they
 conflict.
 
 ## Your notes
@@ -166,14 +166,14 @@ Add `.masterclass/` to `.gitignore` if you don't want them in Git.
 
 Learning notes are organized by topic (e.g. Drawing & color, Transformations,
 Typography, Motion & time), so you can find things again. When you choose
-**Review** after starting `learn`, you can pick a topic to be quizzed on.
+**Review** after starting `build`, you can pick a topic to be quizzed on.
 
-Coding mode writes a **protocol** for every challenge in `.masterclass/challenges/`:
+Challenge mode writes a **protocol** for every challenge in `.masterclass/challenges/`:
 the task, every check, hint and solution in order, and a short review at the
 end (result, what went well, what was difficult, concepts practiced, next step).
 `challenges.md` is the overview with links to all protocols. The protocol, the
 overview and your notes are written once, when a challenge ends (solved, skipped
-or paused with "stop coding") – so you aren't asked for file permissions during the
+or paused with "stop challenge") – so you aren't asked for file permissions during the
 challenge. A paused challenge can be continued in a new chat.
 
 ## License

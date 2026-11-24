@@ -1,0 +1,5 @@
+interface:
+  display_name: "Masterclass Build"
+  short_description: "Start or resume p5.js build mode"
+policy:
+  allow_implicit_invocation: false

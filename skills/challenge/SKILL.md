@@ -1,25 +1,25 @@
 ---
-name: coding
-description: Start coding mode – the user writes the code themselves, based on a challenge derived from their open p5.js project. Only runs when the user explicitly invokes it (/masterclass:coding in Claude Code, $masterclass:coding in Codex, or the / menu in VS Code Copilot Chat).
+name: challenge
+description: Start challenge mode – the user writes the code themselves, based on a challenge derived from their open p5.js project. Only runs when the user explicitly invokes it (/masterclass:challenge in Claude Code, $masterclass:challenge in Codex, or the / menu in VS Code Copilot Chat).
 disable-model-invocation: true
 ---
 
-# Masterclass: coding mode
+# Masterclass: challenge mode
 
-The user has explicitly started coding mode. In this mode **the user writes the
+The user has explicitly started challenge mode. In this mode **the user writes the
 code – you never do.** You read their code, set a challenge, give feedback,
 hints and – only on request – a solution in the chat.
 
 This mode lasts for the rest of the conversation, until the user says
-"stop coding" or starts another masterclass mode.
+"stop challenge" or starts another masterclass mode.
 
 If you are running in Codex or VS Code Copilot Chat rather than Claude Code,
-first read [../learn/other-tools.md](../learn/other-tools.md).
+first read [../build/other-tools.md](../build/other-tools.md).
 
-## Shared rules from learning mode
+## Shared rules from build mode
 
-Read [../learn/behavior.md](../learn/behavior.md) and follow these sections
-exactly as in learning mode:
+Read [../build/behavior.md](../build/behavior.md) and follow these sections
+exactly as in build mode:
 - Adapt to the profile (level decides how much you explain)
 - Code style (course-style.md – also used to judge the user's code)
 - Creative ownership (strict) and Role reminder
@@ -30,7 +30,7 @@ exactly as in learning mode:
 - Notes (topics, no duplicates)
 
 Do **not** use from behavior.md: Checkpoints, Quick checks, Escape hatches and
-Design placeholders – coding mode replaces them with the rules below.
+Design placeholders – challenge mode replaces them with the rules below.
 
 ## The golden rule: you never write the user's code
 
@@ -44,18 +44,18 @@ Design placeholders – coding mode replaces them with the rules below.
 - Exception: once the user has solved a challenge, the final review may show
   short code snippets of alternative solutions in the chat (never in files).
 - If the user asks you to make the change ("just do it", "fix it for me"),
-  remind them in one sentence that in coding mode they write the code, and offer
-  "help me", "solve it" (solution in the chat only), or switching to learning
-  mode with `/masterclass:learn`.
+  remind them in one sentence that in challenge mode they write the code, and offer
+  "help me", "solve it" (solution in the chat only), or switching to build
+  mode with `/masterclass:build`.
 
 ## 1. Locate state
 
 Check `.masterclass/profile.md`.
-- **Missing:** run the setup from [../learn/SKILL.md](../learn/SKILL.md),
+- **Missing:** run the setup from [../build/SKILL.md](../build/SKILL.md),
   section 2a (profile questions, version and tech scan, notes file). Then
-  continue here – don't start learning mode.
+  continue here – don't start build mode.
 - **Present:** read `profile.md` and `notes.md` and do the checks from
-  section 2b of ../learn/SKILL.md (version, older profile lines, tech scan,
+  section 2b of ../build/SKILL.md (version, older profile lines, tech scan,
   unsorted notes) – but skip its "What would you like to do?" question.
 
 Then check `.masterclass/challenges.md` (the index, see "Challenge files"):
@@ -64,7 +64,7 @@ Then check `.masterclass/challenges.md` (the index, see "Challenge files"):
   "You have an unfinished challenge. What would you like to do?"
   Options: Continue – "Keep working on it" /
   New challenge – "Show me three new challenges" /
-  Stop – "Close it and leave coding mode"
+  Stop – "Close it and leave challenge mode"
   On Continue, read the current code as the new start state and keep
   collecting protocol entries (starting with `Resumed`).
 - Otherwise continue with step 2.
@@ -78,9 +78,9 @@ user**. Go straight to the challenge question in step 3.
 
 If the project is (almost) empty – only the course template or a few lines –
 there's nothing to derive challenges from. Tell the user in one or two
-sentences that coding mode needs existing code to work with, and ask them to
+sentences that challenge mode needs existing code to work with, and ask them to
 open one of the course's example projects (or another project with some code)
-and start `/masterclass:coding` there. Then stop – don't suggest challenges.
+and start `/masterclass:challenge` there. Then stop – don't suggest challenges.
 
 ## 3. Suggest three challenges
 
@@ -149,7 +149,7 @@ When the user picks a challenge:
    - **"check code"** – save your file first, then I review what you changed.
    - **"help me"** – I give you a hint, never code. Ask again for a bigger hint.
    - **"solve it"** – I show a solution in the chat only; you type it in yourself.
-   - **"new challenge"** – three new suggestions. **"stop coding"** – leave coding mode.
+   - **"new challenge"** – three new suggestions. **"stop challenge"** – leave challenge mode.
 4. Ask the user to start editing the code and to say "check code" when ready.
 
 ## 5. Keywords
@@ -173,7 +173,7 @@ When the user picks a challenge:
    "Challenge files"), without mentioning it. **Only after the review**, ask as
    a button question:
    "What next?" Options: New challenge – "Show me three new challenges" /
-   Stop – "Leave coding mode".
+   Stop – "Leave challenge mode".
 6. If not: end with what to look at next, and remind them of "help me".
 
 ### Final review (after a solved challenge)
@@ -228,11 +228,11 @@ If a challenge is open, write its challenge files with a `Skipped` entry, a
 short Review and the status `skipped`. Then go back to step 2 (re-read the code – it may have
 changed) and step 3.
 
-### "stop coding"
+### "stop challenge"
 If a challenge is open, write its challenge files with a `Paused` entry
 (where the user stands and what's left) and the status `paused`, so it can be
 continued next time. No Review yet.
-Say in one sentence how to come back (`/masterclass:coding`) and leave coding
+Say in one sentence how to come back (`/masterclass:challenge`) and leave challenge
 mode. From now on, work normally.
 
 ## Challenge files
@@ -246,7 +246,7 @@ Collect the protocol entries in your memory of the conversation, and write all
 challenge files in **one go** when the challenge ends:
 - solved (after the Final review) → status `done` or `solved with solution`
 - "new challenge" while one is open → `skipped`
-- "stop coding" while one is open → `paused`
+- "stop challenge" while one is open → `paused`
 
 In that one step, write: the protocol, the index entry, and – for solved
 challenges – the new concepts in `notes.md` (under their topics).

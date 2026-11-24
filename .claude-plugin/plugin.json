@@ -1,6 +1,6 @@
 {
   "name": "masterclass",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "Learn p5.js while the AI builds your sketches with you.",
   "author": { "name": "Schultzschultz" },
   "license": "MIT",

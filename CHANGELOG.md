@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0
+
+- **Renamed commands:** `learn` is now **`build`** (build mode – the AI codes with you) and `coding` is now **`challenge`** (challenge mode – you write the code yourself).
+  - Claude Code: `/masterclass:build`, `/masterclass:challenge`
+  - Codex: `$masterclass:build`, `$masterclass:challenge`
+  - Copilot Chat: `/masterclass build`, `/masterclass challenge`
+- Renamed phrases: "pause learning" → "pause build", "stop coding" → "stop challenge".
+- Your profile, learning notes and challenge protocols in `.masterclass/` keep working unchanged.
+
 ## 1.4.1
 
 - Coding mode goes straight to the challenge choice: no summary of the project before the three options.

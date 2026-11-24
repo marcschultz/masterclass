@@ -11,7 +11,7 @@ The template files are in [template/](template/) next to this file:
 `index.html`, `css/style.css`, `js/sketch.js`, `AGENTS.md`.
 
 If you are running in Codex or VS Code Copilot Chat, read
-[../learn/other-tools.md](../learn/other-tools.md) for command names and paths.
+[../build/other-tools.md](../build/other-tools.md) for command names and paths.
 
 Ask the questions in steps 1–3 one at a time, then create everything.
 
@@ -130,6 +130,6 @@ Tell the user in a few lines:
   the course folder is open),
 - that masterclass may need to be switched on for the new project
   (`/plugins` → switch next to masterclass) if they opened it as its own folder,
-- to start learning mode with `/masterclass:learn` (or the tool's equivalent).
+- to start build mode with `/masterclass:build` (or the tool's equivalent).
 
-Don't start learning mode automatically.
+Don't start build mode automatically.

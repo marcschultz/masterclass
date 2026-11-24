@@ -7,7 +7,7 @@ disable-model-invocation: true
 # Masterclass reset
 
 If you are running in Codex or VS Code Copilot Chat, read
-[../learn/other-tools.md](../learn/other-tools.md) for command names.
+[../build/other-tools.md](../build/other-tools.md) for command names.
 
 1. Explain once: this backs up the profile and notes to `.masterclass.backup/`
    and restarts setup; sketch files stay untouched. Then ask as a button question
@@ -17,5 +17,5 @@ If you are running in Codex or VS Code Copilot Chat, read
    Then wait. On Cancel, stop and say nothing changed.
 2. If yes: rename `.masterclass/` to `.masterclass.backup/`
    (replace an older backup). Never touch source files.
-3. Then run the setup from [../learn/SKILL.md](../learn/SKILL.md) (section 2a)
-   and continue in learning mode.
+3. Then run the setup from [../build/SKILL.md](../build/SKILL.md) (section 2a)
+   and continue in build mode.
