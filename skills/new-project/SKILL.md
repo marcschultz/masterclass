@@ -13,7 +13,8 @@ The template files are in [template/](template/) next to this file:
 If you are running in Codex or VS Code Copilot Chat, read
 [../build/other-tools.md](../build/other-tools.md) for command names and paths.
 
-Ask the questions in steps 1–3 one at a time, then create everything.
+Ask the questions in steps 1–3 one at a time (skip the ones that don't apply),
+then create everything.
 
 Two kinds of questions:
 - **Open text questions** (project name, location, a folder path): if your
@@ -22,10 +23,34 @@ Two kinds of questions:
   AskUserQuestion in Claude Code – write the question as a normal chat message
   instead and wait for the reply. Never add placeholder options like "I'll type
   a name" or "Other".
-- **Button questions** (p5.js version, how to add p5.js): use AskUserQuestion
+- **Button questions** (where the project goes, p5.js version, how to add p5.js): use AskUserQuestion
   in Claude Code with the options given below.
 
-## 1. Project name
+## 1. Where the project goes
+
+Look at the current folder (the folder open in VS Code). It counts as
+**empty** if it contains nothing except hidden files and folders such as
+`.DS_Store`, `.git`, `.vscode` or `.masterclass`.
+
+**a) The current folder is empty:** ask as a button question:
+"This folder is empty. Where should the project go?"
+- Use this folder – "Create the project directly in <folder name>"
+- New folder inside – "Create a new project folder inside <folder name>"
+
+For **Use this folder**: don't ask for a name and don't rename anything.
+The project goes directly into the current folder, and the **title** is the
+folder name exactly as it is (e.g. `02_01_particle_field`). Go to step 3.
+
+For **New folder inside**: continue with step 2.
+
+**b) The current folder is not empty and not a project** (no index.html in it):
+the new project folder goes inside the current folder. Continue with step 2.
+
+**c) The current folder is a project** (index.html in it): ask as an open text
+question where the new project should go (e.g. next to it, in the parent
+folder). Then continue with step 2.
+
+## 2. Project name (only for a new folder)
 
 Ask as an open text question: "What should the project be called?"
 Use a plain text field if your tool has one; in Claude Code, write it as a
@@ -38,14 +63,8 @@ From the answer, derive:
   If the user gave a folder-style name (e.g. `02_01_particle_field`), keep it.
 - **Title**: the name as the user wrote it (e.g. "Particle Field").
 
-## 2. Location
-
-- If the current folder is not itself a project (no index.html in it),
-  create the new folder inside the current folder.
-- If the current folder is a project, ask as an open text question where the
-  new project should go (e.g. next to it, in the parent folder).
-- If a folder with that name already exists, stop and ask for another name.
-  Never overwrite anything.
+If a folder with that name already exists, stop and ask for another name.
+Never overwrite anything.
 
 ## 3. p5.js version
 
@@ -57,7 +76,8 @@ Options (neutral – no recommendation):
 
 ## 4. Create the files
 
-Create the folder and copy the template files into it, keeping the structure:
+Create the folder (or, for "Use this folder", use the current folder) and copy
+the template files into it, keeping the structure:
 
 ```
 <folder>/
@@ -132,10 +152,12 @@ exists.
 
 Tell the user in a few lines:
 - where the project was created and which p5.js version it uses,
-- how to open it: in VS Code via File → Open Folder… (or keep working here if
-  the course folder is open),
-- that masterclass may need to be switched on for the new project
-  (`/plugins` → switch next to masterclass) if they opened it as its own folder,
+- how to open it: if it was created in the current folder, it's already open;
+  otherwise in VS Code via File → Open Folder… (or keep working here if the
+  course folder is open),
+- in Claude Code, only if masterclass was installed locally (not "Install for
+  you") and they open the project as its own folder: it may need to be switched
+  on there (`/plugins` → switch next to masterclass),
 - to start build mode with `/masterclass:build` (or the tool's equivalent).
 
 Don't start build mode automatically.

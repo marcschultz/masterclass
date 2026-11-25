@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.5
+
+- `new-project`: if the open folder is empty (hidden files ignored), asks whether to use that folder – no name question, the folder name becomes the title – or to create a new project folder inside it (asks for the name as before).
+- Claude Code: the recommended install scope is now **Install for you** (user scope), so masterclass is available in all projects – the same as in Codex and Copilot. README and the new-project finish message updated.
+
 ## 2.0.4
 
 - Challenge mode: the final review now ends with a short, motivating sentence and one emoji (from a fixed set), matched to what the user achieved.

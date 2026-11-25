@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.4** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.5** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -14,11 +14,10 @@ All three tools share your learning notes, so you can switch between them.
 
 1. Type `/plugins` to open **Manage plugins**.
 2. On the **Marketplaces** tab, add `marcschultz/masterclass`.
-3. On the **Plugins** tab, install **masterclass** and choose **Install locally**
-   to enable it only for the current project.
-4. In other projects, turn it on with the switch next to `masterclass@schultzschultz`.
-   Tip: if you open one course folder that contains all your projects, you only
-   need to switch it on once.
+3. On the **Plugins** tab, install **masterclass** and choose **Install for you**.
+   It's then available in all your projects – like in Codex and Copilot. It only
+   starts when you run one of its commands.
+4. Start a new chat.
 
 ### Codex (CLI or VS Code extension)
 
@@ -73,7 +72,9 @@ projects first.
 setup again. Your sketch files are never touched.
 
 **new-project** – Creates an empty project from the course template
-(`index.html`, `css/style.css`, `js/sketch.js`, `AGENTS.md`, an empty `assets/` folder, `libraries/`). It asks
+(`index.html`, `css/style.css`, `js/sketch.js`, `AGENTS.md`, an empty `assets/` folder, `libraries/`). If the folder
+open in VS Code is empty, it asks whether to use that folder (its name becomes the
+project title) or create a new project folder inside it. It asks
 whether to use p5.js 1.x or 2.x, downloads the latest stable version into `libraries/`,
 and fills in the AGENTS.md for that version. If the download fails, you can copy
 p5.js from another project or add it yourself.
