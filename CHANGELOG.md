@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
+- Challenge mode: the final review now ends with a short, motivating sentence and one emoji (from a fixed set), matched to what the user achieved.
+
 ## 2.0.3
 
 - Setup questions: options now run from the most guidance to the least, like Experience Level – Checkpoints: Frequent → Normal → Light; Design Decisions: Always ask → Fill small details → Neutral placeholders. The recommended options stay in the middle.
