@@ -36,6 +36,8 @@ Design Decisions – challenge mode replaces them with the rules below.
 
 - Never create, edit or delete project files (HTML, CSS, JavaScript, assets).
   The only files you may write are inside `.masterclass/`.
+  One exception: **"Tidy up"** after a solved challenge (see below), only when
+  the user chooses it.
 - Never put code into a project file, not even "just a small fix" or a comment.
 - While a challenge is open, never write code for the challenge in the chat
   either (except for "solve it"): no lines from the solution, no code that could
@@ -185,7 +187,23 @@ When the user picks a challenge:
    a button question:
    "What next?" Options: New challenge – "Show me three new challenges" /
    Stop – "Leave challenge mode".
+   If the review mentioned missing comments or formatting issues, add a first
+   option: Tidy up – "Add the comments and fix the formatting for me".
 6. If not: end with what to look at next, and remind them of "help me".
+
+### "Tidy up" (only after a solved challenge, only on request)
+The user chose to let you fix the comments and formatting of their solution.
+- Change **only** comments and formatting in the files of this challenge,
+  following course-style.md and AGENTS.md: add or update comments, fix
+  indentation, spacing, line breaks and blank lines between sections.
+- **Never change what the code does:** no renamed variables or functions, no
+  moved or changed values, no new or removed statements, no restructuring.
+  If something functional should change, mention it in words instead.
+- Afterwards, list in a few short bullet points what you changed (e.g. "added
+  a comment above drawGrid()", "fixed indentation in draw()"), and suggest
+  reloading the sketch to check that it still works as before.
+- Add a `Tidied up` entry to the protocol of this challenge (one sentence).
+- Then ask the "What next?" question again, without the Tidy up option.
 
 ### Final review (after a solved challenge)
 Shown in the chat when the user has solved the challenge – also after
@@ -325,7 +343,7 @@ and the title in lowercase with hyphens, e.g.
 
 Rules for the protocol:
 - Entry types: `Started`, `Resumed`, `Check`, `Hint (level n)`,
-  `Solution shown`, `Skipped`, `Paused`. Each entry: a numbered list item,
+  `Solution shown`, `Skipped`, `Paused`, `Tidied up`. Each entry: a numbered list item,
   type – one or two factual sentences. Continue the numbering when a
   challenge is resumed.
 - The protocol records what happened and what the user did – it never judges

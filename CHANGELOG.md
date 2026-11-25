@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.9
+
+- Challenge mode: after a solved challenge with missing comments or formatting issues, "What next?" offers **Tidy up** – the AI adds the comments and fixes the formatting in the user's files, without changing what the code does, and lists what it changed.
+
 ## 2.0.8
 
 - Challenge mode: completion depends on functionality only. Missing comments, formatting or style points are mentioned as tips but never block a solved challenge; "Done when" criteria never ask for comments or style.
