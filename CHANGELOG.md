@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.8
+
+- Challenge mode: completion depends on functionality only. Missing comments, formatting or style points are mentioned as tips but never block a solved challenge; "Done when" criteria never ask for comments or style.
+
 ## 2.0.7
 
 - Challenge mode, "help me": from the second hint on, a hint may include one short, generic syntax example (how a function or construct is written) – never the solution or a part of it that can be pasted in.

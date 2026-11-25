@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.7** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.8** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the

@@ -145,7 +145,9 @@ When the user picks a challenge:
 2. **Explain the challenge** in the chat, short and clear:
    - **Your task** – what to achieve, in plain words.
    - **Where** – file and function(s) to work in.
-   - **Done when** – the criteria for the challenge.
+   - **Done when** – the criteria for the challenge. Criteria are about
+     functionality only (what the code does or what changes on screen) –
+     never about comments, formatting or code style.
    - **Concepts you'll need** – 1–3 function or concept names, without code.
 3. **Explain the rules and keywords** (adapt the wording to the user's tool):
    - You write all the code. I won't change your files.
@@ -169,8 +171,13 @@ When the user picks a challenge:
      explain *why* it doesn't work yet. Don't write the corrected code.
    - **Style and structure** – only the most important 1–2 points from the
      course style / AGENTS.md (e.g. a value that belongs in CONFIGURATION).
+     Mention missing or outdated comments here too, as a tip.
 4. Remember a `Check` entry for the protocol: which criteria are met, what's
    still missing, and the main feedback points.
+   **Only functionality decides.** Check the criteria against what the code
+   does. Missing comments, formatting or style points never block completion –
+   mention them as tips, but if the code works as asked, the challenge is
+   solved.
 5. If all criteria are met, the challenge is solved. Give the user a **review
    and feedback in the chat** (see "Final review" below). Then write the
    challenge files in one go (protocol with this review, index, notes – see
@@ -191,7 +198,8 @@ never the visual result):
 2. **What's good** – 1–3 technical strengths (e.g. a clear variable name, a
    value that now lives in one place, a function that can be reused).
 3. **What could be better** – 0–2 points on style or structure (course style,
-   AGENTS.md), each with the reason. Skip this if there's nothing important.
+   AGENTS.md), each with the reason – e.g. missing comments. Skip this if
+   there's nothing important.
 4. **Alternative solutions** – 1 alternative for beginners, up to 2 for
    intermediate/advanced: a different technical way to reach the same goal,
    with a short code snippet and one or two sentences on when it would be the
