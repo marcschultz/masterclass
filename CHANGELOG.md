@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.6
+
+- `new-project`: the p5.js version question now lists 1.x first, then 2.x.
+- README: shorter wording for the Claude Code install scope.
+
 ## 2.0.5
 
 - `new-project`: if the open folder is empty (hidden files ignored), asks whether to use that folder – no name question, the folder name becomes the title – or to create a new project folder inside it (asks for the name as before).

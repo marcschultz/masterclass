@@ -1,6 +1,6 @@
 # masterclass
 
-**Version 2.0.5** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
+**Version 2.0.6** · p5.js learning plugin for Claude Code, Codex and VS Code Copilot Chat
 
 Masterclass helps you learn p5.js while the AI builds your sketches with you.
 Instead of writing code right away, it asks for your design decisions, plans the
@@ -15,8 +15,8 @@ All three tools share your learning notes, so you can switch between them.
 1. Type `/plugins` to open **Manage plugins**.
 2. On the **Marketplaces** tab, add `marcschultz/masterclass`.
 3. On the **Plugins** tab, install **masterclass** and choose **Install for you**.
-   It's then available in all your projects – like in Codex and Copilot. It only
-   starts when you run one of its commands.
+   It's then available in all your projects. It only starts when you run one of
+   its commands.
 4. Start a new chat.
 
 ### Codex (CLI or VS Code extension)

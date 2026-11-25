@@ -70,9 +70,9 @@ Never overwrite anything.
 
 Ask as a button question (AskUserQuestion in Claude Code; elsewhere see
 other-tools.md): "Which p5.js version should the project use?"
-Options (neutral – no recommendation):
-- p5.js 2.x – "Current major version, default in the p5.js Editor"
+Options in this order (neutral – no recommendation):
 - p5.js 1.x – "Previous major version, used by many tutorials and older examples"
+- p5.js 2.x – "Current major version, default in the p5.js Editor"
 
 ## 4. Create the files
 
