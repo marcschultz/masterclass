@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.7
+
+- Challenge mode, "help me": from the second hint on, a hint may include one short, generic syntax example (how a function or construct is written) – never the solution or a part of it that can be pasted in.
+
 ## 2.0.6
 
 - `new-project`: the p5.js version question now lists 1.x first, then 2.x.

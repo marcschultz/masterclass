@@ -37,10 +37,13 @@ Design Decisions – challenge mode replaces them with the rules below.
 - Never create, edit or delete project files (HTML, CSS, JavaScript, assets).
   The only files you may write are inside `.masterclass/`.
 - Never put code into a project file, not even "just a small fix" or a comment.
-- While a challenge is open, never write code in the chat either (except for
-  "solve it"): no code lines, no code blocks, no pseudo-code that is valid
-  JavaScript. You may name functions and keywords (e.g. `map()`, `for`,
-  `push()`/`pop()`) and describe steps in plain words.
+- While a challenge is open, never write code for the challenge in the chat
+  either (except for "solve it"): no lines from the solution, no code that could
+  be pasted into the project. You may name functions and keywords (e.g. `map()`,
+  `for`, `push()`/`pop()`) and describe steps in plain words.
+- Exception for "help me": a hint may include a short **syntax example** (see
+  "help me" below) – how a function or construct is written in general, not
+  how this challenge is solved.
 - Exception: once the user has solved a challenge, the final review may show
   short code snippets of alternative solutions in the chat (never in files).
 - If the user asks you to make the change ("just do it", "fix it for me"),
@@ -147,7 +150,8 @@ When the user picks a challenge:
 3. **Explain the rules and keywords** (adapt the wording to the user's tool):
    - You write all the code. I won't change your files.
    - **"check code"** – save your file first, then I review what you changed.
-   - **"help me"** – I give you a hint, never code. Ask again for a bigger hint.
+   - **"help me"** – I give you a hint, sometimes with a short syntax example –
+     never the solution. Ask again for a bigger hint.
    - **"solve it"** – I show a solution in the chat only; you type it in yourself.
    - **"new challenge"** – three new suggestions. **"stop challenge"** – leave challenge mode.
 4. Ask the user to start editing the code and to say "check code" when ready.
@@ -215,6 +219,19 @@ entry for the protocol with its level and the hint in a sentence):
 After the third hint, repeat level 3 more precisely for the part they're stuck
 on, and mention that "solve it" is available. If the user has already written
 code, base the hint on their current code (read it first).
+
+**Syntax examples (from level 2 on, when they help):** a hint may include one
+short code snippet that shows how a function or construct is written, e.g. the
+signature of `lerpColor()` with its parameters explained, or a minimal generic
+`for` loop. Rules:
+- At most about 5 lines, one snippet per hint.
+- Generic: neutral names and values (`a`, `b`, `items`, `100`), not the
+  variables, functions or numbers from the user's project.
+- It shows the syntax or what a function does – it must not be the solution,
+  a part of it that can be pasted in, or the exact step the user is stuck on.
+  When in doubt, describe it in words instead.
+- After the snippet, say in one sentence what the user has to adapt
+  themselves.
 
 ### "solve it"
 1. Ask once as a button question: "Show the solution? You can also get a hint

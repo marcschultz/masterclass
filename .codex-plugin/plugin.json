@@ -1,6 +1,6 @@
 {
   "name": "masterclass",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Learn p5.js while Codex builds your sketches with you.",
   "author": { "name": "Schultzschultz" },
   "license": "MIT",
